@@ -1,13 +1,14 @@
 let random;
+randomNum();
 function randomNum() {
   random = Math.floor(Math.random() * 6);
   console.log(random);
 }
 
-function slidesPlugin(activeSlide = 0) {
+function slidesPlugin(random) {
   const slides = document.querySelectorAll(".slide"); //array of slides
 
-  slides[activeSlide].classList.add("active");
+  slides[random].classList.add("active");
 
   for (const slide of slides) {
     slide.addEventListener("click", () => {
@@ -23,5 +24,5 @@ function slidesPlugin(activeSlide = 0) {
   }
 }
 
-randomNum();
+
 slidesPlugin(random);
